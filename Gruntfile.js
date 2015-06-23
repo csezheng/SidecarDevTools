@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'scss',
                     src: ['**/*.scss'],
-                    dest: 'css',
+                    dest: 'src/css',
                     ext: '.css'
                 }]
             }
@@ -22,18 +22,28 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    "templates/templates.js": ["templates/*.handlebars"]
+                    "src/templates/templates.js": ["src/templates/*.handlebars"]
                 }
             }
         },
         watch: {
             sass: {
-                files: ['scss/*.scss'],
+                files: ['src/scss/*.scss'],
                 tasks: ['sass']
             },
             hbs: {
-                files: ['templates/*.handlebars'],
+                files: ['src/templates/*.handlebars'],
                 tasks: ['handlebars']
+            }
+        },
+        crx: {
+            sidecarDevTools: {
+                "src": [
+                    "src/",
+                    "!.{git,svn}"
+                ],
+                "dest": "dist/crx/SidecarDevTools.1.0.alpha.crx",
+                "privateKey": "~/.ssh/sidecarDevTools.pem"
             }
         }
     });
@@ -41,6 +51,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
+    grunt.loadNpmTasks('grunt-crx');
 
     grunt.registerTask('default', ['watch']);
 };
