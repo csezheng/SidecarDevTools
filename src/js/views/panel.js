@@ -26,6 +26,7 @@
       '#structure':   BDT.views.Structure,
       '#performance':   BDT.views.Performance,
       '#generate':   BDT.views.Generate,
+      '#repair':   BDT.views.Repair,
       '#metrics':   BDT.views.Metrics,
       '#appstream':   BDT.views.AppStream
     },

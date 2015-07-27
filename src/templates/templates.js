@@ -223,8 +223,12 @@ this["Handlebars"]["templates"]["performance"] = Handlebars.template({"1":functi
     + "    </tbody>\n</table>\n";
 },"useData":true});
 
+this["Handlebars"]["templates"]["repair"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<h3 class=\"text-center\">Repair and Rebuild</h3>\n\n";
+},"useData":true});
+
 this["Handlebars"]["templates"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<ul>\n  <li class=\"selected\"><a href=\"#general\">Settings</a></li>\n  <li><a href=\"#appstream\">Application Stream</a></li>\n  <li><a href=\"#structure\">Structure</a></li>\n  <li><a href=\"#performance\">Render times</a></li>\n  <!--<li><a href=\"#metrics\">Metrics</a></li>-->\n  <li><a href=\"#generate\">Generate records</a></li>\n</ul>\n";
+    return "<ul>\n  <li class=\"selected\"><a href=\"#general\">Settings</a></li>\n  <li><a href=\"#appstream\">Application Stream</a></li>\n  <li><a href=\"#structure\">Structure</a></li>\n  <li><a href=\"#performance\">Render times</a></li>\n  <!--<li><a href=\"#metrics\">Metrics</a></li>-->\n  <li><a href=\"#generate\">Generate records</a></li>\n      <li><a href=\"#repair\">Repair and Rebuild</a></li>\n</ul>\n";
 },"useData":true});
 
 this["Handlebars"]["templates"]["structure"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

@@ -18,7 +18,8 @@ module.exports = function(grunt) {
                 options: {
                     namespace: "Handlebars.templates",
                     processName: function(filePath) {
-                        return filePath.slice(filePath.indexOf('/')+1, filePath.indexOf('.'));
+                        //return filePath.slice(filePath.indexOf('/')+1, filePath.indexOf('.'));
+                        return filePath.slice(filePath.indexOf('/', 4)+1, filePath.indexOf('.'));
                     }
                 },
                 files: {
